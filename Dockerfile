@@ -1,5 +1,5 @@
 #use the officail OpenJDK 25 image from docker hub as the base image
-FROM eclipse-temurin:25-jre
+FROM public.ecr.aws/docker/library/eclipse-temurin:25-jre
 
 #Set working directory in the container to /app
 WORKDIR /app
