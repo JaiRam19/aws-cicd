@@ -35,4 +35,10 @@ public class UserService {
          }
          return users;
     }
+
+    public String deleteByUsername(String username) {
+        // This method would delete a user account by its ID.
+        userRepository.deleteByUsername(username);
+        return "User with username: " + username + " has been deleted successfully.";
+    }
 }

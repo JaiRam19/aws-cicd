@@ -27,4 +27,10 @@ public class UserRepository {
                 .findFirst()
                 .or(Optional::empty);
     }
+
+    public void deleteByUsername(String username) {
+        UserAccountDto user = findByUsername(username)
+                .orElseThrow(() -> new ResourceNotFoundException("User not found with username: " + username));
+        users.remove(user);
+    }
 }

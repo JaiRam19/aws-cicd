@@ -33,4 +33,8 @@ public class UserController {
         return new ResponseEntity<>(userService.getAllAccounts(), HttpStatus.OK);
     }
 
+    public ResponseEntity<String> deleteAccount(@RequestHeader("username") String username) {
+        return new ResponseEntity<>(userService.deleteByUsername(username), HttpStatus.OK);
+    }
+
 }
