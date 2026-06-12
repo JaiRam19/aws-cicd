@@ -5,10 +5,10 @@ FROM public.ecr.aws/docker/library/eclipse-temurin:25-jre
 WORKDIR /app
 
 #Copy the compiled jar file from the target directory of the host machine to the /app directory in the container
-COPY  ./target/post-image-0.0.1-SNAPSHOT /app
+COPY  ./target/post-image-0.0.1-SNAPSHOT.jar /app/app.jar
 
 #Expose port 8080 to allow external access to the application running inside the container
 EXPOSE 8080
 
 #Command to run the application when the container starts. It executes the jar file using java -jar command
-CMD ["java", "-jar", "post-image-0.0.1-SNAPSHOT"]
+CMD ["java", "-jar", "/app/app.jar"]
