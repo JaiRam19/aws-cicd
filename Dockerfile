@@ -11,4 +11,4 @@ COPY  ./target/post-image-0.0.1-SNAPSHOT /app
 EXPOSE 8080
 
 #Command to run the application when the container starts. It executes the jar file using java -jar command
-COMMAND ["java", "-jar", "post-image-0.0.1-SNAPSHOT"]
+CMD ["java", "-jar", "post-image-0.0.1-SNAPSHOT"]
