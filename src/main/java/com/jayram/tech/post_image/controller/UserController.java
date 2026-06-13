@@ -38,6 +38,10 @@ public class UserController {
         return new ResponseEntity<>(userService.deleteByUsername(username), HttpStatus.OK);
     }
 
+    @GetMapping("/welcome")
+    public ResponseEntity<String> welcomeMessage() {
+        return new ResponseEntity<>("Welcome to the User Account API!", HttpStatus.OK);
+    }
 
 
 }
